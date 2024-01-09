@@ -80,3 +80,26 @@ saveInventoryItem({
     trackingNumber: "",
     createDate: new Date()
 });
+
+function clone<T>(source: T): T {
+    const serialized= JSON.stringify(source);
+    return JSON.parse(serialized);
+}; 
+
+const clone2 = <T>(source: T): T => {
+    const serialized = JSON.stringify(source);
+    return JSON.parse(serialized);
+};
+
+//in both below examples cloned and cloned2 will have infered type;
+const cloned = clone<InventoryItem>(inventoryItem);
+const cloned2 = clone2(inventoryItem);
+
+interface KeyValuePair<TKey, TValue> {
+    Key: TKey;
+    Value: TValue;
+};
+
+var keyvalue1: KeyValuePair<string, number> = {Key: "myKey", Value: 1234};
+var keyvalue2: KeyValuePair<number, boolean> = {Key: 123, Value: true};
+

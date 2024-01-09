@@ -62,3 +62,18 @@ saveInventoryItem({
     trackingNumber: "",
     createDate: new Date()
 });
+function clone(source) {
+    var serialized = JSON.stringify(source);
+    return JSON.parse(serialized);
+}
+;
+var clone2 = function (source) {
+    var serialized = JSON.stringify(source);
+    return JSON.parse(serialized);
+};
+//in both below examples cloned and cloned2 will have infered type;
+var cloned = clone(inventoryItem);
+var cloned2 = clone2(inventoryItem);
+;
+var keyvalue1 = { Key: "myKey", Value: 1234 };
+var keyvalue2 = { Key: 123, Value: true };
