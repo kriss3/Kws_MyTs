@@ -1,3 +1,12 @@
+const basePath = "src";
+
+const loadDependencies = () => Promise.all([
+  $.get(`${basePath}/testData.js`),
+  $.get(`${basePath}/storage.js`),
+  $.get(`${basePath}/inventoryStore.js`),
+]);
+
+
 import inventoryStore from "./inventoryStore.js";
 
 const MainContent = () => ({

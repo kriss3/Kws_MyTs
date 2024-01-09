@@ -167,10 +167,12 @@ class InventoryStore {
 
   /**
    * Load the current inventory items.
-   *
+   * 
    * @returns {Promise<boolean>} a promise with the loading state
    *
    * @private  <-- just information, doesn't actually do anything at runtime
+   * 
+   * To fix errors update files to TS2 or extend tsconfig.json file fot TS to be aware of JS.
    */
   protected _load() {
     return Promise.all([

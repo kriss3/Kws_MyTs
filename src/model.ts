@@ -103,3 +103,4 @@ interface KeyValuePair<TKey, TValue> {
 var keyvalue1: KeyValuePair<string, number> = {Key: "myKey", Value: 1234};
 var keyvalue2: KeyValuePair<number, boolean> = {Key: 123, Value: true};
 
+declare var Vue: any;

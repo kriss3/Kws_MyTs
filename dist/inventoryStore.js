@@ -140,6 +140,8 @@ var InventoryStore = /** @class */ (function () {
      * @returns {Promise<boolean>} a promise with the loading state
      *
      * @private  <-- just information, doesn't actually do anything at runtime
+     *
+     * To fix errors update files to TS2 or extend tsconfig.json file fot TS to be aware of JS.
      */
     InventoryStore.prototype._load = function () {
         var _this = this;
