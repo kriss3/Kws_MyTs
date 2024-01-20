@@ -10,13 +10,21 @@ function getFromStorage(key) {
 
 /**
  * Save data to storage
- */
 function saveToStorage(key, data) {
   return __delay(() => {
     const serialized = JSON.stringify(data);
     localStorage.setItem(key, serialized);
   });
 }
+*/
+
+
+const saveToStorage2 = (key, data) => {
+  return __delay(() => {
+    const serialized = JSON.stringify(data);
+    localStorage.setItem(key, serialized);
+  });
+};
 
 /** helper function to introduce a random delay to simulate network conditions */
 function __delay(action) {
